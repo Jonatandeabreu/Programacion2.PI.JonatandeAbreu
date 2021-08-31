@@ -8,7 +8,6 @@ package mundomarinog;
 
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
-import static mundomarinog.Guias.mostrar;
 
 /**
  *

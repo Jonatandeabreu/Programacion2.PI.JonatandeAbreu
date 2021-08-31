@@ -75,7 +75,7 @@ public class Guias {
     }
 
     public static int Verificarnewuser(String usuario) {
-        Vector lista = mostrar();
+        Vector lista = mostrarg();
         Guias obj;
         for (int i = 0; i < lista.size(); i++) {
             obj = (Guias) lista.elementAt(i);
@@ -87,7 +87,7 @@ public class Guias {
     }
 
     public static int VerificarG(String user, String contra) {
-        Vector lista = mostrar();
+        Vector lista = mostrarg();
         Guias obj;
         for (int i = 0; i < lista.size(); i++) {
             obj = (Guias) lista.elementAt(i);
@@ -102,8 +102,8 @@ public class Guias {
         this.FechaI = FechaI;
     }
 
-    public static Vector mostrar() {
-        return Listadeusuarios.mostrarg();
+    public static Vector mostrarg() {
+        return Listadeusuarios.mostrarguia();
     }
     
     @Override

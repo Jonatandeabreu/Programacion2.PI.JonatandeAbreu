@@ -253,6 +253,11 @@ public class RegistroG extends javax.swing.JFrame {
    
          }else{
              JOptionPane.showMessageDialog(this,"Este usuario ya existe");
+             txtuser.setText("");
+             txtcontra.setText("");
+             txtnombre.setText("");
+             txtdireccion.setText("");
+             txttlf.setText("");
          }
     }//GEN-LAST:event_btnregistroActionPerformed
 

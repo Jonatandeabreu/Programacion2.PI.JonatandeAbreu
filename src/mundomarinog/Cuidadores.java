@@ -102,7 +102,7 @@ public class Cuidadores {
     }
 
     public static Vector mostrarc() {
-        return Listadeusuarios.mostrar();
+        return Listadeusuarios.mostrarcuidador();
     }
     
     public static int Verificaradmin(String user,String contra){

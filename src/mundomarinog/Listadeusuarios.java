@@ -18,7 +18,7 @@ public class Listadeusuarios {
         datos.addElement(obj);
     }
     
-    public static Vector mostrar(){
+    public static Vector mostrarcuidador(){
         return datos;
     }
     
@@ -29,7 +29,7 @@ public class Listadeusuarios {
         datosg.addElement(obj);
     }
     
-    public static Vector mostrarg(){
+    public static Vector mostrarguia(){
         return datosg;
     }
     

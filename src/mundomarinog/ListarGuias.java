@@ -7,7 +7,6 @@ package mundomarinog;
 
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
-import static mundomarinog.Guias.mostrar;
 
 /**
  *
@@ -29,7 +28,7 @@ public class ListarGuias extends javax.swing.JFrame {
     public void ListarGuias(){
      
       DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
-      Vector lista = Guias.mostrar();
+      Vector lista = Guias.mostrarg();
         Guias obj;
         String datos[] = new String[5];
         for (int i = 0; i < lista.size(); i++) {
