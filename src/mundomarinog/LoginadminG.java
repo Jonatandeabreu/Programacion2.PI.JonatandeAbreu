@@ -138,7 +138,7 @@ public class LoginadminG extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String nick = txtuser.getText();
         String contra = txtcontra.getText();
-        int pos = Cuidadores.Verificaradmin(nick, contra);
+        int pos = Usuarios.Verificaradmin(nick, contra);
         if(pos == 1){
             RegistroG abrir = new RegistroG();
             abrir.setVisible(true);

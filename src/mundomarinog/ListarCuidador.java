@@ -28,7 +28,7 @@ public class ListarCuidador extends javax.swing.JFrame {
     public void ListarCuidador(){
      
       DefaultTableModel modelo = (DefaultTableModel) tabla2.getModel();
-      Vector lista2 = Cuidadores.mostrarc();
+      Vector lista2 = Cuidadores.mostrarcuidador();
         Cuidadores obj;
         String datos[] = new String[5];
         for (int i = 0; i < lista2.size(); i++) {
@@ -37,7 +37,7 @@ public class ListarCuidador extends javax.swing.JFrame {
             datos[1] = obj.getDireccion();
             datos[2] = String.valueOf(obj.getTLF());
             datos[3] = obj.getFechaI();
-            datos[4] = obj.getTareag();
+            datos[4] = obj.getTarea();
             modelo.addRow(datos);
         }
         

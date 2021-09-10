@@ -11,71 +11,20 @@ import java.util.Vector;
  *
  * @author Usuario
  */
-public class Guias {
+public class Guias extends Usuarios{
+   
+    private static Vector<Guias> datosg = new Vector<Guias>();
     
-    private String nick;
-    private String contra;
-    private String Nombre;
-    private String Direccion;
-    private int TLF;
-    private String FechaI;
-    private String Tareag;
-
-    public String getTareag() {
-        return Tareag;
+    public static void agregarguia(Guias obj){
+        datosg.addElement(obj);
     }
-
-    public void setTareag(String Tareag) {
-        this.Tareag = Tareag;
+    
+    public static Vector mostrarguia(){
+        return datosg;
     }
-
-    public String getNick() {
-        return nick;
-    }
-
-    public void setNick(String nick) {
-        this.nick = nick;
-    }
-
-    public String getContra() {
-        return contra;
-    }
-
-    public void setContra(String contra) {
-        this.contra = contra;
-    }
-
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
-    }
-
-    public int getTLF() {
-        return TLF;
-    }
-
-    public void setTLF(int TLF) {
-        this.TLF = TLF;
-    }
-
-    public String getFechaI() {
-        return FechaI;
-    }
-
+    
     public static int Verificarnewuser(String usuario) {
-        Vector lista = mostrarg();
+        Vector lista = mostrarguia();
         Guias obj;
         for (int i = 0; i < lista.size(); i++) {
             obj = (Guias) lista.elementAt(i);
@@ -83,11 +32,12 @@ public class Guias {
                 return i;
             }
         }
+         
         return -1;
     }
-
-    public static int VerificarG(String user, String contra) {
-        Vector lista = mostrarg();
+    
+    public static int Verificar(String user, String contra) {
+        Vector lista = mostrarguia();
         Guias obj;
         for (int i = 0; i < lista.size(); i++) {
             obj = (Guias) lista.elementAt(i);
@@ -95,20 +45,9 @@ public class Guias {
                 return i;
             }
         }
+        
         return -1;
     }
-
-    public void setFechaI(String FechaI) {
-        this.FechaI = FechaI;
-    }
-
-    public static Vector mostrarg() {
-        return Listadeusuarios.mostrarguia();
-    }
     
-    @Override
-    public String toString(){
-        return nick+"\n"+contra+"\n"+Nombre+"\n"+Direccion+"\n"+TLF+"\n"+FechaI+"\n"+Tareag+"\n";
-    }
     
 }

@@ -131,8 +131,8 @@ public class Login extends javax.swing.JFrame {
         String nick = txtuser.getText();
         String Contra = txtcontra.getText();
         int pos = Cuidadores.Verificar(nick, Contra);
-        int posa = Cuidadores.Verificaradmin(nick, Contra);
-        int posg = Guias.VerificarG(nick, Contra);
+        int posa = Usuarios.Verificaradmin(nick, Contra);
+        int posg = Guias.Verificar(nick, Contra);
         if(pos==-1 && posa == -1 && posg == -1){
             JOptionPane.showMessageDialog(this,"Usuario no existe");
         }else{

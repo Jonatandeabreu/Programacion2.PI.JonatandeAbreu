@@ -11,70 +11,19 @@ import java.util.Vector;
  *
  * @author Usuario
  */
-public class Cuidadores {
-    private String Nick;
-    private String Contra;
-    private String Nombre;
-    private String Direccion;
-    private int TLF;
-    private String FechaI;
-    private String Tarea;
-
-    public String getTareag() {
-        return Tarea;
+public class Cuidadores extends Usuarios{
+    
+    private static Vector<Cuidadores> datos = new Vector<Cuidadores>();
+    
+    public static void agregar(Cuidadores obj){
+        datos.addElement(obj);
     }
-
-    public void setTareag(String Tareac) {
-        this.Tarea = Tareac;
+    
+    public static Vector mostrarcuidador(){
+        return datos;
     }
-
-    public String getNick() {
-        return Nick;
-    }
-
-    public void setNick(String nick) {
-        this.Nick = nick;
-    }
-
-    public String getContra() {
-        return Contra;
-    }
-
-    public void setContra(String contra) {
-        this.Contra = contra;
-    }
-
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
-    }
-
-    public int getTLF() {
-        return TLF;
-    }
-
-    public void setTLF(int TLF) {
-        this.TLF = TLF;
-    }
-
-    public String getFechaI() {
-        return FechaI;
-    }
-
     public static int Verificarnewuser(String usuario) {
-        Vector lista = mostrarc();
+        Vector lista = mostrarcuidador();
         Cuidadores obj;
         for (int i = 0; i < lista.size(); i++) {
             obj = (Cuidadores) lista.elementAt(i);
@@ -82,11 +31,12 @@ public class Cuidadores {
                 return i;
             }
         }
+         
         return -1;
     }
-
+    
     public static int Verificar(String user, String contra) {
-        Vector lista = mostrarc();
+        Vector lista = mostrarcuidador();
         Cuidadores obj;
         for (int i = 0; i < lista.size(); i++) {
             obj = (Cuidadores) lista.elementAt(i);
@@ -96,25 +46,6 @@ public class Cuidadores {
         }
         return -1;
     }
-
-    public void setFechaI(String FechaI) {
-        this.FechaI = FechaI;
-    }
-
-    public static Vector mostrarc() {
-        return Listadeusuarios.mostrarcuidador();
-    }
     
-    public static int Verificaradmin(String user,String contra){
-        if(user.equals("Admin") && contra.equals("admin")){
-            return 1;
-        }
-       return -1;
-    }
-   
-    
-    @Override
-    public String toString(){
-        return Nick+"\n"+Contra+"\n"+Nombre+"\n"+Direccion+"\n"+TLF+"\n"+FechaI+"\n"+Tarea+"\n";
-    }
 }
+

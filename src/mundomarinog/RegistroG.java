@@ -234,16 +234,15 @@ public class RegistroG extends javax.swing.JFrame {
         String FechaI = formato.format(txtfecha.getDate());
         String Tareag = txtcargo.getSelectedItem().toString();
         Guias obj = new Guias();
-         if(Guias.Verificarnewuser (nick) 
-        ==-1){
+         if(Guias.Verificarnewuser (nick) ==-1){
     obj.setNick(nick);    
     obj.setContra(contra);
     obj.setNombre(Nombre);
     obj.setDireccion(Direccion);
     obj.setTLF(TLF);
     obj.setFechaI(FechaI);
-    obj.setTareag(Tareag);
-    Listadeusuarios.agregarguia(obj);
+    obj.setTarea(Tareag);
+    Guias.agregarguia(obj);
     JOptionPane.showMessageDialog(this,"Se registro correctamente");
     txtuser.setText("");
     txtcontra.setText("");

@@ -236,8 +236,8 @@ public class Registro extends javax.swing.JFrame {
     obj.setDireccion(Direccion);
     obj.setTLF(TLF);
     obj.setFechaI(FechaI);
-    obj.setTareag(Tarea);
-    Listadeusuarios.agregar(obj);
+    obj.setTarea(Tarea);
+    Cuidadores.agregar(obj);
     JOptionPane.showMessageDialog(this,"Se registro correctamente");
     txtuser.setText("");
     txtcontra.setText("");

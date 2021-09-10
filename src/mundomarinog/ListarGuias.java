@@ -28,7 +28,7 @@ public class ListarGuias extends javax.swing.JFrame {
     public void ListarGuias(){
      
       DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
-      Vector lista = Guias.mostrarg();
+      Vector lista = Guias.mostrarguia();
         Guias obj;
         String datos[] = new String[5];
         for (int i = 0; i < lista.size(); i++) {
@@ -37,7 +37,7 @@ public class ListarGuias extends javax.swing.JFrame {
             datos[1] = obj.getDireccion();
             datos[2] = String.valueOf(obj.getTLF());
             datos[3] = obj.getFechaI();
-            datos[4] = obj.getTareag();
+            datos[4] = obj.getTarea();
             modelo.addRow(datos);
         }
         
